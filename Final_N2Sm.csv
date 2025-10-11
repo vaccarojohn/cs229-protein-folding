@@ -1,0 +1,190 @@
+﻿,,,,,Present dataset,,,,,,,,,,,,,AG dataset,,,,,
+No.,"Protein
+short name",PDB,Class,Fold,Lpdb,L,pH,"Temp
+(°C)","Folding
+type",ln(kf),"ln(kf)
+(25°C)",,ln(kI),ln(ku),"ln(ku)
+(25°C)",,βT,pH,"Temp
+(°C)","Folding
+type",ln(kf),PDB Sequence,Comments
+1,Apomyoglobin (Whale) [1],1A6N,α,Globin-like,151,153,6.2,5,N2S,1.1,4.5,,NA,-3.8,5.5,,0.72,—,—,—,—,VLSEGEWQLVLHVWAKVEADVAGHGQDILIRLFKSHPETLEKFDRFKHLKTEAEMKASEDLKKHGVTVLTALGAILKKKGHHEAELKPLAQSHATKHKIPIKYLEFISEAIIHVLHSRHPGDFGADAQGAMNKALELFRKDIAAKYKELGY,
+2,Pit1 [2],1AU7 (103–160),α,DNA/RNA-binding 3-helical bundle,58,63,5.5,25,N2S,9.7,,,12.6,5.5,,,0.74,—,—,—,—,WEIRD,
+3,4-helix bundle protein FRB [3],1AUE (Chain B: 2022–2115),α,Four-helical up-and-down bundle ,94,95,7.5,10,N2S,5.4,6.7,,NA,-5.2,-1,,0.83,"—
+ —","—
+ —",—,"—
+ 6.0",WEIRD,"Both the AG and our datasets adopted the same reference [3]. The ACPro and our datasets reported the same ln(kf) value, but the Garbuzynskiy dataset reported a different value."
+4,IM7 [4],1AYI (1–86),α,HIV-1 gp41 fragments ,86,86,7,10,N2S,5.7,6.9,,8,-0.84,3,,0.9,—,25,2S,7.2,MELKNSISDYTEAEFVQLLKEIEKENVAATDDVLDVLLEHFVKITEHPDGTDLIYYPSDNRDDSPEGIVKEIKEWRAANGKPGFKQG,"The ln(kf) value reported in the AG dataset was based on the 2S model [5]. However, the N2S nature of this protein is well established [4], so that our reported value is based on the N2S model."
+5,Apomyoglobin (Horse) [6],1DWR (1–152),α,Globin-like,152,153,6,26,N2S,2.9,2.9,,5.3,NA,,,NA,NA,Na,NA,NA,GLSDGEWQQVLNVWGKVEADIAGHGQEVLIRLFTGHPETLEKFDKFKHLKTEAEMKASEDLKKHGTVVLTALGGILKKKGHHEAELKPLAQSHATKHKIPIKYLEFISDAIIHVLHSKHPGDFGADAQGAMTKALELFRNDIAAKYKELGFQG,The value of ln(kI) was taken from the rate constant of the fast phase of the bi-phasic refolding kinetics reported.
+6,Engrailed Homeodomain [7],1ENH,α,DNA/RNA-binding 3-helical bundle,54,54,5.7,25,N2S,10.6,,,NA,7.6,,,0.83,—,—,—,—,RPRTAFSSEQLARLKREFNENRYLTERRRQQLSSELGLNEAQIKIWFQNKRAKI,
+7,FF domain from human HYPA/FBP11 [8],1UZC (3–71),α,3-Helical bundle,69,71,5.7,25,N2S,8,,,9.9,3.4,,,0.91,"—
+ —","—
+ 10",—,"—
+ 7.6",GSQPAKKTYTWNTKEEAKQAFKELLKEKRVPSNASWEQAMKMIINDPRYSALAKLSEKKQAFNAYKVQTEK,"The same experimental group reported the ln(kf) values at 25°C [8] and at 10°C [9]. The ACPro and our datasets reported the value at 25°C, but the Garbuzynskiy dataset reported the value at 10°C."
+8,ACBP (Bovine) [10],1NTI,α,Acyl-CoA binding protein-like ,86,86,5.3,26,N2S,6.5,6.4,,9.3,-2.7,-2.9,,0.7,—,25,2S,6.96,SQAEFDKAAEEVKHLKTKPADEEMLFIYSHYKQATVGDINTERPGMLDFKGKAKWDAWNELKGTSKEDAMKAYIDKVEELKKKYGI,"The ln(kf) value reported in the AG dataset was based on the 2S model [5]. However, the N2S nature of this protein is well established [10], so that our reported value is based on the N2S model."
+9,Phage 434 Cro [11],2CRO (1–65),α,Lambda repressor-like DNA-binding domains ,65,71,6,20,N2S,3.7,4,,NA,-0.39,,,0.91,"—
+ —","—
+ —",—,"5.35
+ —",MQTLSERLKKRRIALKMTQTELATKAGVKQQSIQLIEAGVTKRPRFLFEIAMALNCDPVWLQYGTKRGKAA,"Both the AG and our datasets adopted the same reference [11]. The Garbuzynskiy and our datasets reported the same ln(kf) value, but the ACPro dataset reported a different value."
+10,X domain of Measles Virus protein [12],1OKS,α,Immunoglobulin/albumin-binding domain-like ,49,49,7.2,25,N2S,6.2,,,8.6,4.5,,,0.84,NA,NA,NA,NA,MASRSVIRSIIKSSRLEEDRKRYLMTLLDDIKGANDLAKFHQMLVKIIMKHHHHHH,
+11,Barstar [13],1BTA,α/β,Barstar-like,89,90,7,25,N2S,3.5,,,NA,-2.3,,,NA,8,—,—,3.47,KKAVINGEQIRSISDLHQTLKKELALPEYYGENLDALWDCLTGWVEYPLVLEWRQFEQSKQLTENGAESVLQVFREAKAEGCDITIILS,"We have adopted the data from reference [13], which is more updated than reference [14] adopted by the AG dataset."
+12,Apoflavodoxin (Anabaena) [15],1FTG (2–169),α/β,Flavodoxin-like,168,169,7,25,N2S,2.3,,,3.4,-3,,,0.55,"—
+ —","—
+ —",2S,"—
+ 2.8",KKIGLFYGTQTGKTESVAEIIRDEFGNDVVTLHDVSQAEVTDLNDYQYLIIGCPTWNIGELQSDWEGLYSELDDVDFNGKLVAYFGTGDQIGYADNFQDAIGILEEKISQRGGKTVGYWSTDGYDFNDSKALRNGKFVGLALDEDNQSDLTDDRIKSWVAQLKSEFGL,"The ln(kf) value reported in the AG dataset was based on the 2S model [16]. However, the N2S nature of this protein is well established [15], so that our reported value is based on the N2S model. Moreover, the intermediate (I) is mostly off-pathway."
+13,HIV-1 RNase H [17],1HRH (427–556),α/β,Ribonuclease H-like motif ,130,134,5.5,25,N2S,0.88,,,NA,-2.5,,,0.64,NA,NA,NA,NA,WEIRD,
+14,N-PGK (Bacillus stearothermophilus) [18],1PHP (1–175),α/β,Phosphoglycerate kinase,175,175,7.5,25,N2S,2.3,,,NA,-3.5,,,0.84,—,—,—,—,MNKKTIRDVDVRGKRVFCRVDFNVPMEQGAITDDTRIRAALPTIRYLIEHGAKVILASHLGRPKGKVVEELRLDAVAKRLGELLERPVAKTNEAVGDEVKAAVDRLNEGDVLLLENVRFYPGEEKNDPELAKAFAELADLYVNDAFGAAHRAHASTEGIAHYLPAVAGFLMEKELEVLGKALSNPDRPFTAIIGGAKVKDKIGVIDNLLEKVDNLIIGGGLAYTFVKALGHDVGKSLLEEDKIELAKSFMEKAKEKGVRFYMPVDVVVADRFANDANTKVVPIDAIPADWSALDIGPKTRELYRDVIRESKLVVWNGPMGVFEMDAFAHGTKAIAEALAEALDTYSVIGGGDSAAAVEKFGLADKMDHISTGGGASLEFMEGKQLPGVVALEDK,
+15,C-PGK (Bacillus stearothermophilus) [19],1PHP (186–394),α/β,Phosphoglycerate kinase,209,209,7.2,25,N2S,-4,,,NA,-9.3,,,0.51,"—
+ —","—
+ —",—,"−3.44
+ —",MNKKTIRDVDVRGKRVFCRVDFNVPMEQGAITDDTRIRAALPTIRYLIEHGAKVILASHLGRPKGKVVEELRLDAVAKRLGELLERPVAKTNEAVGDEVKAAVDRLNEGDVLLLENVRFYPGEEKNDPELAKAFAELADLYVNDAFGAAHRAHASTEGIAHYLPAVAGFLMEKELEVLGKALSNPDRPFTAIIGGAKVKDKIGVIDNLLEKVDNLIIGGGLAYTFVKALGHDVGKSLLEEDKIELAKSFMEKAKEKGVRFYMPVDVVVADRFANDANTKVVPIDAIPADWSALDIGPKTRELYRDVIRESKLVVWNGPMGVFEMDAFAHGTKAIAEALAEALDTYSVIGGGDSAAAVEKFGLADKMDHISTGGGASLEFMEGKQLPGVVALEDK,"The Garbuzynskiy and our datasets have adopted the data from reference [19], which is more updated than reference [18] adopted by the ACPro dataset."
+16,DHFR [20],1RA9,α/β,Dihydrofolate reductase-like ,159,159,7.8,15,N2S,-0.37,0.86,,1.5,-5.2,-0.29,,0.92,"—
+ —","—
+ —",—,"NA
+ −3.20",MISLIAALAVDRVIGMENAMPWNLPADLAWFKRNTLDKPVIMGRHTWESIGRPLPGRKNIILSSQPGTDDRVTWVKSVDEAIAACGDVPEIMVIGGGRVYEQFLPKAQKLYLTHIDAEVEGDTHFPDYEPDDWESVFSEFHDADAQNSHSYCFEILERR,"We have adopted the data from reference [20], which is more updated than reference [21] adopted by the AG dataset."
+17,Trp-synthase α-subunit (Escherichia coli) [22],1WQ5,α/β,TIM β/α-barrel ,268,268,7,25,N2S,-2.1,,,NA,-8.9,,,NA,—,—,—,—,MERYESLFAQLKERKEGAFVPFVTLGDPGIEQSLKIIDTLIEAGADALELGIPFSDPLADGPTIQNATLRAFAAGVTPAQCFEMLALIRQKHPTIPIGLLMYANLVFNKGIDEFYAQCEKVGVDSVLVADVPVEESAPFRQAALRHNVAPIFICPPNADDDLLRQIASYGRGYTYLLSRAGVTGAENRAALPLNHLVAKLKEYNAAPPLQGFGISAPDQVKAAIDAGAAGAISGSAIVKIIEQHINEPEKMLAALKVFVQPMKAATRS,
+18,RNase H (Escherichia coli) [23],2RN2,α/β,Ribonuclease H-like motif,155,155,5.5,25,N2S,-0.3,,,NA,-11.4,,,0.8,"—
+ —","—
+ —",—,"0.0095
+ 0.1",MLKQVEIFTDGSCLGNPGPGGYGAILRYRGREKTFSAGYTRTTNNRMELMAAIVALEALKEHCEVILSTDSQYVRQGITQWIHNWKKRGWKTADKKPVKNVDLWQRLDAALGQHQIKWEWVKGHAGHPENERCDELARAAAMNPTLEDTGYQVEV,"We have adopted the data from reference [23] although the AG datasets adopted the data from reference [24], because the ln(kf) value reported in reference [24] is not the value in H2O but in D2O."
+19,CheY [25],3CHY,α/β,Flavodoxin-like,128,129,7,25,N2S,1,,,NA,-4.4,,,0.7,—,—,—,—,ADKELKFLVVDDFSTMRRIVRNLLKELGFNNVEEAEDGVDALNKLQAGGYGFVISDWNMPNMDGLELLKTIRADGAMSALPVLMVTAEAKKENIIAAAQAGASGYVVKPFTAATLEEKLNKIFEKLGM,
+20,Apoflavodoxin (Desulfovibrio desulfuricans) [26],3F6R (2–148),α/β, Flavodoxin-like,147,148,7,20,N2S,3.5,4,,NA,-5.8,-3.6,,0.88,—,—,—,—,MSKVLIVFGSSTGNTESIAQKLEELIAAGGHEVTLLNAADASAENLADGYDAVLFGCSAWGMEDLEMQDDFLSLFEEFDRIGLAGRKVAAFASGDQEYEHFCGAVPAIEERAKELGATIIAEGLKMEGDASNDPEAVASFAEDVLKQL,
+21,sIGPS (Sulfolobus solfataricus) [27],1IGS (27–248),α/β,TIM β/α-barrel ,222,222,7.8,25,N2S,-4.5,,,NA,-13.9,,,0.79,"NA
+ —","NA
+ —","NA
+ —","NA
+ —",MPRYLKGWLKDVVQLSLRRPSFRASRQRPIISLNERILEFNKRNITAIIAEYKRKSPSGLDVERDPIEYSKFMERYAVGLSILTEEKYFNGSYETLRKIASSVSIPILMKDFIVKESQIDDAYNLGADTVLLIVKILTERELESLLEYARSYGMEPLIEINDENDLDIALRIGARFIGINSRDLETLEINKENQRKLISMIPSNVVKVAESGISERNEIEELRKLGVNAFLIGSSLMRNPEKIKEFIL,
+22,RNase H (Chlorobaculum tepidum) [28],3H08,α/β,Ribonuclease H-like motif,146,146,5.5,25,N2S,1.6,,,NA,-13.6,,,NA,"NA
+ —","NA
+ —","NA
+ —","NA
+ —",MEKTITIYTDGAASGNPGKGGWGALLMYGSSRKEISGYDPATTNNRMELMAAIKGLEALKEPARVQLYSDSAYLVNAMNEGWLKRWVKNGWKTAAKKPVENIDLWQEILKLTTLHRVTFHKVKGHSDNPYNSRADELARLAIKENS,
+23,HisF [29],1THF,α/β,TIM β/α-barrel ,253,253,7.5,25,N2S,-3.2,,,-1.4,-29.7,,,NA,NA,NA,NA,NA,MLAKRIIACLDVKDGRVVKGSNFENLRDSGDPVELGKFYSEIGIDELVFLDITASVEKRKTMLELVEKVAEQIDIPFTVGGGIHDFETASELILRGADKVSINTAAVENPSLITQIAQTFGSQAVVVAIDAKRVDGEFMVFTYSGKKNTGILLRDWVVEVEKRGAGEILLTSIDRDGTKSGYDTEMIRFVRPLTTLPIIASGGAGKMEHFLEAFLAGADAALAASVFHFREIDVRELKEYLKKHGVNVRLEGL,
+24,GFP [30],1B9C (4–230),α+β,GFP-like,227,238,7.5,25,N2S,-2.6,,,0.78,-23.5,,,NA,"—
+ NA","—
+ NA","—
+ NA","−1.59
+ NA",ASKGEELFTGVVPILVELDGDVNGHKFSVSGEGEGDATYGKLTLKFICTTGKLPVPWPTLVTTFTYGVQCFSRYPDHMKQHDFFKSAMPEGYVQERTISFKDDGNYKTRAEVKFEGDTLVNRIELKGIDFKEDGNILGHKLEYNYNSHNVYITADKQKNGIKANFKIRHNIEDGSVQLADHYQQNTPIGDGPVLLPDNHYLSTQSALSKDPNEKRDHMVLLEFVTAAGITHGMDELYK,"Although both the ACPro and our datasets adopted the data from the same reference [30], the ln(kf) value reported is different between the two datasets. Because this protein exhibited multiple parallel pathways of folding, we reported the averaged kf value obtained by the equation:"
+25,Barnase [32],1BNI (3–110),α+β,Microbial ribonucleases,108,110,7.5,25,N2S,2.7,,,NA,-12.2,,,0.64,6.3,—,—,2.56,AQVINTFDGVADYLQTYHKLPDNYITKSEAQALGWVASKGNLADVAPGKSIGGDIFSNREGKLPGKSGRTWREADINYTSGFRNSDRILYSSDWLIYKTTDHYQTFTKIR,kf = Σfiki
+26,p16INK4a [34],2A5E (9–156),α+β,β-Hairpin-α-hairpin repeat ,148,148,7.5,25,N2S,3.5,,,NA,-0.22,,,0.89,—,—,—,—,MEPAAGSSMEPSADWLATAAARGRVEEVRALLEAGALPNAPNSYGRRPIQVMMMGSARVAELLLLHGAEPNCADPATLTRPVHDAAREGFLDTLVVLHRAGARLDVRDAWGRLPVDLAEELGHRDVARYLRAAAGGTRGSNHARIDAAEGPSDIPD,"where fi and ki are the fractional amplitude and the observed rate constant, respectively, of the ith pathway of folding. On the other hand, the ACPro dataset reported the value of the major pathway of folding. The ln(ku) was taken from reference [31]."
+27,N-HypF [35],1GXT (4–91),α+β,Ferredoxin-like,88,91,5.5,28,N2S,4.4,4.3,,NA,-3.9,-4.7,,NA,—,—,—,—,MAKNTSCGVQLRIRGKVQGVGFRPFVWQLAQQLNLHGDVCNDGDGVEVRLREDPEVFLVQLYQHCPPLARIDSVEREPFIWSQLPTEFTIR,"We have adopted the data from reference [32], which is more updated than reference [33] adopted by the AG dataset."
+28,Monellin [36],1FA3,α+β,β-β-α Zinc fingers,96,97,7,25,N2S,4.1,,,NA,-10.8,,,0.89,NA,NA,NA,NA,GEWEIIDIGPFTQNLGKFAVDEENKIGQYGRLTFNKVIRPCMKKTIYENEGFREIKGYEYQLYVYASDKLFRADISEDYKTRGRKLLRFNGPVPPP,
+29,T4 Lysozyme [24],1L63 (1–162),α+β, Lysozyme-like ,162,164,6,25,N2S,3.7,,,NA,-12.3,,,NA,—,—,—,4.1,MNIFEMLRIDEGLRLKIYKDTEGYYTIGIGHLLTKSPSLNAAKSELDKAIGRNTNGVITKDEAEKLFNQDVDAAVRGILRNAKLKPVYDSLDAVRRAALINMVFQMGETGVAGFTNSLRMLQQKRWDEAAVNLAKSRWYNQTPNRAKRVITTFRTGTWDAYKNL,
+30,B1 domain of protein G (Streptococcal sp. group G) [37],1PGB,α+β,Ubiquitin-like,56,57,5,20,N2S,6.4,6.6,,7.7,-2,-1.2,,0.85,7.5,25,2S,6.3,MTYKLILNGKTLKGETTTEAVDAATAEKVFKQYANDNGVDGEWTYDDATKTFTVTE,"Because this protein exhibited multiple parallel pathways of folding, we reported the averaged kf value obtained by the equation shown in the comment of entry number 24."
+31,p13suc1 [38],1PUC_mod (2–102),α+β,Cell cycle regulatory proteins,101,114,7.5,25,N2S,4.2,,,NA,-4,,,0.8,—,—,—,—,WEIRD,"Although the ACPro and our dataset adopted the data from the same reference [24], the ln(kf) value reported is different between the two datasets. The ACPro dataset reported the value based on the 2S model, however, our value is based on N2S model."
+32,Ubiquitin [40],1UBQ,α+β,Ubiquitin-like,76,76,5,25,N2S,5.3,,,7.3,-6.7,,,0.65,—,—,2S,7.33,MQIFVKTLTGKTITLEVEPSDTIENVKAKIQDKEGIPPDQQRLIFAGKQLEDGRTLSDYNIQKESTLHLVLRLRGG,"The ln(kf) value reported in the AG dataset was based on the 2S model [5]. However, the N2S nature of this protein is well established [37], so that our reported value is based on the N2S model. The value was measured in the presence of 0.4 M sodium sulfate [37]."
+33,Villin 14T [42],2VIL,α+β,Gelsolin-like,126,126,5,37,N2S,4.2,4,,NA,-2.4,-6.9,,0.78,"4.1
+ 4.1","25
+ —",—,"11.9
+ 5.0",VELSKKVTGKLDKTTPGIQIWRIENMEMVPVPTKSYGNFYEGDCYVLLSTRKTGSGFSYNIHYWLGKNSSQDEQGAAAIYTTQMDEYLGSVAVQHREVQGHESETFRAYFKQGLIYKQGGVASGMK,"1PUC_mod indicates the monomeric form of p13suc1, and its coordinates were kindly given by J. Schymkowitz [39]."
+34,β-Lactamase (Staphylococcus aureus) [44],3BLM,α+β,β-Lactamase/transpeptidase-like,257,257,7,25,N2S,-6.6,,,NA,-10.8,,,0.79,NA,NA,NA,NA,KELNDLEKKYNAHIGVYALDTKSGKEVKFNSDKRFAYASTSKAINSAILLEQVPYNKLNKKVHINKDDIVAYSPILEKYVGKDITLKALIEASMTYSDNTANNKIIKEIGGIKKVKQRLKELGDKVTNPVRYEIELNYYSPKSKKDTSTPAAFGKTLNKLIANGKLSKENKKFLLDLMLNNKSGDTLIKDGVPKDYKVADKSGQAITYASRNDVAFVYPKGQSEPIVLVIFTNKDNKSDKPNDKLISETAKSVMKEF,"The ln(kf) value reported in the AG dataset was based on the 2S model [5]. However, the N2S nature of this protein is well established [40], so that our reported value is based on the N2S model. "
+35,ACYP (Sulfolobus solfataricus) [45],2BJD (12–101),α+β,Ferredoxin-like,90,101,5.5,37,N2S,1.7,1.6,,NA,-12,-15.2,,0.66,NA,NA,NA,NA,MKKWSDTEVFEMLKRMYARVYGLVQGVGFRKFVQIHAIRLGIKGYAKNLPDGSVEVVAEGYEEALSKLLERIKQGPPAAEVEKVDYSFSEYKGEFEDFETY,"Moreover, the ln(ku) was taken from the following reference  [41]."
+36,UCH-L3 [46],1UCH (5–230),α+β,Cysteine proteinases ,226,230,7.6,25,N2S,-2.6,,,NA,-6.9,,,0.72,NA,NA,NA,NA,MEGQRWLPLEANPEVTNQFLKQLGLHPNWQFVDVYGMDPELLSMVPRPVCAVLLLFPITEKYEVFRTEEEEKIKSQGQDVTSSVYFMKQTISNACGTIGLIHAIANNKDKMHFESGSTLKKFLEESVSMSPEERARYLENYDAIRVTHETSAHEGQTEAPSIDEKVDLHFIALVHVDGHLYELDGRKPFPINHGETSDETLLEDAIEVCKKFMERDPDELRFNAIALSAA,"We have adopted the data from reference [42], which is more updated than reference [43] adopted by the AG dataset."
+37,Ubq-UIM [47],2KDI,α+β,NA,114,114,7.4,25,N2S,2.3,,,NA,-9.9,,,NA,NA,NA,NA,NA,MHHHHHHGEFQIFAKTLTGKTITLEVESSDTIDNVKSKIQDKEGIPPDQQRLIWAGKQLEDGRTLSDYNIQRESTLHLVLRLRGGSMGGAADEEELIRKAIELSLKESRNSGGY,
+38,Frataxin (Human) [48],1EKG,α+β,N domain of copper amine oxidase-like ,119,130,7,25,N2S,3.5,,,NA,-8.9,,,0.72,NA,NA,NA,NA,GSHMGSLDETTYERLAEETLDSLAEFFEDLADKPYTFEDYDVSFGSGVLTVKLGGDLGTYVINKQTPNKQIWLSSPSSGPKRYDWTGKNWVYSHDGVSLHELLAAELTKALKTKLDLSSLAYSGKDA,
+39,β-Lactamase (Bacillus licheniformis) [49],4BLM (31–291),α+β,β-Lactamase/transpeptidase-like,261,265,7,20,N2S,-4.7,-3.9,,NA,-13.6,-9.6,,0.73,"—
+ NA","—
+ NA","—
+ NA","−1.24
+ NA",KTEMKDDFAKLEEQFDAKLGIFALDTGTNRTVAYRPDERFAFASTIKALTVGVLLQQKSIEDLNQRITYTRDDLVNYNPITEKHVDTGMTLKELADASLRYSDNAAQNLILKQIGGPESLKKELRKIGDEVTNPERFEPELNEVNPGETQDTSTARALVTSLRAFALEDKLPSEKRELLIDWMKRNTTGDALIRAGVPDGWEVADKTGAASYGTRNDIAIIWPPKGDPVVLAVLSSRDKKDAKYDDKLIAEATKVVMKALNMNGK,
+40,CD2.d1 [50],1HNG (2–98),β,Immunoglobulin-like β-sandwich,97,98,7,25,N2S,1.8,,,NA,-5.7,,,NA,—,—,"2S
+ —",—,RDSGTVWGALGHGINLNIPNFQMTDDIDEVRWERGSTLVAEFKRKMKPFLKSGAFEILANGDLKIKNLTRDDSGTYNVTVYSTNGTRILNKALDLRILEMVSKPMIYWECSNATLTCEVLEGTDVELKLYQGKEHLRSLRQKTMSYQWTNLRAPFKCKAVNRVSQESEMEVVNCPE,
+41,IL-1β [51],1I1B (3–153),β,β-Trefoil,151,153,7,25,N2S,-4,,,1.4,-11.1,,,0.93,"—
+ NA","NA
+ NA","—
+ NA","—
+ NA",APVRSLNCTLRDSQQKSLVMSGPYELKALHLQGQDMEQQVVFSMSFVQGEESNDKIPVALGLKEKNLYLSCVLKDDKPTLQLESVDPKNYPKKKMEKRFVFNKIEINNKLEFESAQFPNWYISTSQAENMPVFLGGTKGGQDITDFTMQFVSS,
+42,TI I27 [53],1TIT,β, Immunoglobulin-like β-sandwich,89,89,7.4,25,N2S,3.6,,,NA,-7.6,,,0.94,—,—,"—
+ 2S",—,MHHHHHHSSLIEVEKPLYGVEVFVGETAHFEIELSEPDVHGQWKLKGQPLTASPDCEIIEDGKKHILILHNCQLGMTGEVSFQAANAKSAANLKVKEL,"Although the ACPro and our dataset adopted the data from the same reference [49], the ln(kf) value reported is different between the two datasets. The ACPro dataset reported the value based on the 2S analysis using the kinetic folding data between 0.6 and 2 M guanidinium chloride, whereas our reported value is based on the N2S analysis using the data below 0.4 M guanidinium chloride."
+43,10FNIII [54],1TTG,β,Immunoglobulin-like β-sandwich,94,94,5,25,N2S,5.5,,,NA,-8.4,,,NA,—,—,—,—,VSDVPRDLEVVAATPTSLLISWDAPAVTVRYYRITYGETGGNSPVQEFTVPGSKSTATISGLKPGVDYTITVYAVTGRGDSPASSKPISINYRT,"Both the AG and our datasets adopted the same reference [50]. The Garbuzynskiy and our datasets classified the folding type as the N2S type according to the reference, but the ACPro dataset classified it as the 2S type."
+44,CRABPI (Mouse) [56],1CBI,β,Lipocalins,136,137,8,25,N2S,-3.2,,,2.6,-9.2,,,0.72,"NA
+ —","NA
+ —","NA
+ —","NA
+ —",PNFAGTWKMRSSENFDELLKALGVNAMLRKVAVAAASKPHVEIRQDGDQFYIKTSTTVRTTEINFKVGEGFEEETVDGRKCRSLPTWENENKIHCTQTLLEGDGPKTYWTRELANDELILTFGADDVVCTRIYVRE,The ln(ku) was taken from reference [52].
+45,CRBPII (Rat) [56],1OPA (1–133),β,Lipocalins,133,134,8,25,N2S,1.4,,,7.6,-6.3,,,0.79,"NA
+ —","NA
+ —","NA
+ —","NA
+ —",MTKDQNGTWEMESNENFEGYMKALDIDFATRKIAVRLTQTKIIVQDGDNFKTKTNSTFRNYDLDFTVGVEFDEHTKGLDGRNVKTLVTWEGNTLVCVQKGEKENRGWKQWVEGDKLYLELTCGDQVCRQVFKKK,"Both the AG and our datasets adopted the same reference [53]. The ACPro and our datasets classified the folding type as the N2S type according to the reference, but the Garbuzynskiy dataset classified it as the 2S type."
+46,IFABP [57],1IFC,β,Lipocalins,131,131,7.3,20,N2S,4.3,4.7,,7.6,-5.1,-3.1,,0.69,"NA
+ 8.0","NA
+ 25",—,"NA
+ 3.40",MAFDGTWKVDRNENYEKFMEKMGINVVKRKLGAHDNLKLTITQEGNKFTVKESSNFRNIDVVFELGVDFAYSLADGTELTGTWTMEGNKLVGKFKRVDNGKELIAVREISGNELIQTYTYEGVEAKRIFKKE,The ln(ku) value was obtained by extrapolation to zero denaturant by using the second-order polynomial of the denaturant (GuSCN) activity. The ln(kf) value was based on the linear extrapolation along GuHCl concentration [55].
+47,Carbonic anhydrase II (Bovine) [58],1V9E,β,Carbonic anhydrase ,259,260,8,20,N2S,-4.4,-3.6,,-2.4,-23.6,-19.6,,NA,—,—,—,—,SHHWGYGKHNGPEHWHKDFPIANGERQSPVDIDTKAVVQDPALKPLALVYGEATSRRMVNNGHSFNVEYDDSQDKAVLKDGPLTGTYRLVQFHFHWGSSDDQGSEHTVDRKKYAAELHLVHWNTKYGDFGTAAQQPDGLAVVGVFLKVGDANPALQKVLDALDSIKTKGKSTDFPNFDPGSLLPNVLDYWTYPGSLTTPPLLESVTWIVLKEPISVSSQQMLKFRTLNFNAEGEPELLMLANWRPAQPLKNRQVRGFPK,
+48,CRABPII (Mouse) [59],2FS6,β,Lipocalins,137,137,8,25,N2S,2.3,,,4.7,-5.7,,,0.83,NA,NA,NA,NA,PNFSGNWKIIRSENFEELLKVLGVNVMLRKIAVAAASKPAVEIKQEGDTFYIKTSTTVRTTEINFKVGEEFEEQTVDGRPCKSLVKWESENKMVCEQKLLKGEGPKTSWTRELTNDGELILTMTADDVVCTRVYVRE,
+49,Pseudoazurin [60],1ADW,β,Cupredoxin-like,123,123,7,15,N2S,0.69,1.6,,NA,-3.5,0.2,,0.9,"—
+ NA","—
+ NA","—
+ NA","—
+ NA",ATHEVHMLNKGESGAMVFEPAFVRAEPGDVINFVPTDKSHNVEAIKEILPEGVESFKSKINESYTLTVTEPGLYGVKCTPHFGMGMVGLVQVGDAPENLDAAKTAKMPKKARERMDAELAQVN,"We have adopted the data from reference [57], which is more updated than reference [56] adopted by the Garbuzynskiy dataset."
+50,SNase [61],2PQE,β,OB-fold,149,149,6,20,N2S,2.2,2.7,,4.9,-6.3,-4,,NA,5.3,15,—,2.34,ATSTKKLHKEAATLIKAIDGDTVKLMYKGQAMTFRLLLVDTAETKHTKKGVEKYGAEASAFTKKMVENAKKIEVEFDKGQRTDKYGRGLAYIYADGKMVNEALVRQGLAKVAYVYKGNNTHEQLLRKSEAQAKKEKLNIWSEDNADSGQ,
+51,BABP (Human) [64],5L8I (3–127),β,Lipocalins,125,128,8,25,N2S,0.64,,,2.7,-8.6,,,0.7,NA,NA,NA,NA,MAFTGKFEMESEKNYDEFMKLLGISSDVIEKARNFKIVTEVQQDGQDFTWSQHYSGGHTMTNKFTVGKESNIQTMGGKTFKATVQMEGGKLVVNFPNYHQTSEIVGDKLVEVSTIGGVTYERVSKRLA,
+52,IL-33 [65],2KLL,β,NA,160,160,6.5,25,N2S,-1.4,,,NA,-12.3,,,0.82,NA,NA,NA,NA,GSSITGISPITEYLASLSTYNDQSITFALEDESYEIYVEDLKKDEKKDKVLLSYYESQHPSNESGDGVDGKMLMVTLSPTKDFWLHANNKEHSVELHKCEKPLPDQAFFVLHNMHSNCVSFECKTDPGVFIGVKDNHLALIKVDSSENLCTENILFKLSET,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+References,,,,,,,,,,,,,,,,,,,,,,,
+1,"Cavagnero, S.; Dyson, H. J.; Wright, P. E., Effect of H helix destabilizing mutations on the kinetic and equilibrium folding of apomyoglobin. J Mol Biol 1999, 285, 269-82.",,,,,,,,,,,,,,,,,,,,,,
+2,"Banachewicz, W.; Religa, T. L.; Schaeffer, R. D.; Daggett, V.; Fersht, A. R., Malleability of folding intermediates in the homeodomain superfamily. Proc Natl Acad Sci U S A 2011, 108, 5596-601.",,,,,,,,,,,,,,,,,,,,,,
+3,"Marianayagam, N. J.; Khan, F.; Male, L.; Jackson, S. E., Fast folding of a four-helical bundle protein. J Am Chem Soc 2002, 124, 9744-50.",,,,,,,,,,,,,,,,,,,,,,
+4,"Capaldi, A. P.; Shastry, M. R.; Kleanthous, C.; Roder, H.; Radford, S. E., Ultrarapid mixing experiments reveal that Im7 folds via an on-pathway intermediate. Nat Struct & Mol Biol 2001, 8, 68.",,,,,,,,,,,,,,,,,,,,,,
+5,"Maxwell, K. L.; Wildes, D.; Zarrine-Afsar, A.; De Los Rios, M. A.; Brown, A. G.; Friel, C. T.; Hedberg, L.; Horng, J. C.; Bona, D.; Miller, E. J.; Vallee-Belisle, A.; Main, E. R.; Bemporad, F.; Qiu, L.; Teilum, K.; Vu, N. D.; Edwards, A. M.; Ruczinski, I.; Poulsen, F. M.; Kragelund, B. B.; Michnick, S. W.; Chiti, F.; Bai, Y.; Hagen, S. J.; Serrano, L.; Oliveberg, M.; Raleigh, D. P.; Wittung-Stafshede, P.; Radford, S. E.; Jackson, S. E.; Sosnick, T. R.; Marqusee, S.; Davidson, A. R.; Plaxco, K. W., Protein folding: defining a ""standard"" set of experimental conditions and a preliminary kinetic data set of two-state proteins. Protein Sci 2005, 14, 602-16.",,,,,,,,,,,,,,,,,,,,,,
+6,"Uzawa, T.; Akiyama, S.; Kimura, T.; Takahashi, S.; Ishimori, K.; Morishima, I.; Fujisawa, T., Collapse and search dynamics of apomyoglobin folding revealed by submillisecond observations of alpha-helical content and compactness. Proc Natl Acad Sci U S A 2004, 101, 1171-6.",,,,,,,,,,,,,,,,,,,,,,
+7,"Gianni, S.; Guydosh, N. R.; Khan, F.; Caldas, T. D.; Mayor, U.; White, G. W.; DeMarco, M. L.; Daggett, V.; Fersht, A. R., Unifying features in protein-folding mechanisms. Proc Natl Acad Sci U S A 2003, 100, 13286-91.",,,,,,,,,,,,,,,,,,,,,,
+8,"Jemth, P.; Gianni, S.; Day, R.; Li, B.; Johnson, C. M.; Daggett, V.; Fersht, A. R., Demonstration of a low-energy on-pathway intermediate in a fast-folding protein by kinetics, protein engineering, and simulation. Proc Natl Acad Sci U S A 2004, 101, 6450-5.",,,,,,,,,,,,,,,,,,,,,,
+9,"Jemth, P.; Day, R.; Gianni, S.; Khan, F.; Allen, M.; Daggett, V.; Fersht, A. R., The structure of the major transition state for folding of an FF domain from experiment and simulation. J Mol Biol 2005, 350, 363-78.",,,,,,,,,,,,,,,,,,,,,,
+10,"Teilum, K.; Maki, K.; Kragelund, B. B.; Poulsen, F. M.; Roder, H., Early kinetic intermediate in the folding of acyl-CoA binding protein detected by fluorescence labeling and ultrarapid mixing. Proc Natl Acad Sci U S A 2002, 99, 9807-12.",,,,,,,,,,,,,,,,,,,,,,
+11,"Laurents, D. V.; Corrales, S.; Elias-Arnanz, M.; Sevilla, P.; Rico, M.; Padmanabhan, S., Folding kinetics of phage 434 Cro protein. Biochemistry 2000, 39, 13963-73.",,,,,,,,,,,,,,,,,,,,,,
+12,"Bonetti, D.; Camilloni, C.; Visconti, L.; Longhi, S.; Brunori, M.; Vendruscolo, M.; Gianni, S., Identification and structural characterization of an intermediate in the folding of the measles virus X domain. Journal of Biological Chemistry 2016, jbc. M116. 721126.",,,,,,,,,,,,,,,,,,,,,,
+13,"Shastry, M. C.; Udgaonkar, J. B., The folding mechanism of barstar: evidence for multiple pathways and multiple intermediates. J Mol Biol 1995, 247, 1013-27.",,,,,,,,,,,,,,,,,,,,,,
+14,"Schreiber, G.; Fersht, A. R., The refolding of cis- and trans-peptidylprolyl isomers of barstar. Biochemistry 1993, 32, 11195-203.",,,,,,,,,,,,,,,,,,,,,,
+15,"Fernandez-Recio, J.; Genzor, C. G.; Sancho, J., Apoflavodoxin folding mechanism: an alpha/beta protein with an essentially off-pathway intermediate. Biochemistry 2001, 40, 15234-45.",,,,,,,,,,,,,,,,,,,,,,
+16,"Bueno, M.; Ayuso-Tejedor, S.; Sancho, J., Do proteins with similar folds have similar transition state structures? A diffuse transition state of the 169 residue apoflavodoxin. Journal of molecular biology 2006, 359, 813-824.",,,,,,,,,,,,,,,,,,,,,,
+17,"Kern, G.; Handel, T.; Marqusee, S., Characterization of a folding intermediate from HIV-1 ribonuclease H. Protein Sci 1998, 7, 2164-74.",,,,,,,,,,,,,,,,,,,,,,
+18,"Parker, M. J.; Spencer, J.; Clarke, A. R., An integrated kinetic analysis of intermediates and transition states in protein folding reactions. J Mol Biol 1995, 253, 771-86.",,,,,,,,,,,,,,,,,,,,,,
+19,"Parker, M. J.; Spencer, J.; Jackson, G. S.; Burston, S. G.; Hosszu, L. L.; Craven, C. J.; Waltho, J. P.; Clarke, A. R., Domain behavior during the folding of a thermostable phosphoglycerate kinase. Biochemistry 1996, 35, 15740-52.",,,,,,,,,,,,,,,,,,,,,,
+20,"Svensson, A. K.; O'Neill, J. C., Jr.; Matthews, C. R., The coordination of the isomerization of a conserved non-prolyl cis peptide bond with the rate-limiting steps in the folding of dihydrofolate reductase. J Mol Biol 2003, 326, 569-83.",,,,,,,,,,,,,,,,,,,,,,
+21,"Jennings, P. A.; Finn, B. E.; Jones, B. E.; Matthews, C. R., A reexamination of the folding mechanism of dihydrofolate reductase from Escherichia coli: verification and refinement of a four-channel model. Biochemistry 1993, 32, 3783-3789.",,,,,,,,,,,,,,,,,,,,,,
+22,"Ogasahara, K.; Yutani, K., Unfolding-refolding kinetics of the tryptophan synthase alpha subunit by CD and fluorescence measurements. J Mol Biol 1994, 236, 1227-40.",,,,,,,,,,,,,,,,,,,,,,
+23,"Raschke, T. M.; Kho, J.; Marqusee, S., Confirmation of the hierarchical folding of RNase H: a protein engineering study. Nat Struct Biol 1999, 6, 825-31.",,,,,,,,,,,,,,,,,,,,,,
+24,"Parker, M. J.; Marqusee, S., The cooperativity of burst phase reactions explored. J Mol Biol 1999, 293, 1195-210.",,,,,,,,,,,,,,,,,,,,,,
+25,"Munoz, V.; Lopez, E. M.; Jager, M.; Serrano, L., Kinetic characterization of the chemotactic protein from Escherichia coli, CheY. Kinetic analysis of the inverse hydrophobic effect. Biochemistry 1994, 33, 5858-66.",,,,,,,,,,,,,,,,,,,,,,
+26,"Stagg, L.; Samiotakis, A.; Homouz, D.; Cheung, M. S.; Wittung-Stafshede, P., Residue-specific analysis of frustration in the folding landscape of repeat beta/alpha protein apoflavodoxin. J Mol Biol 2010, 396, 75-89.",,,,,,,,,,,,,,,,,,,,,,
+27,"Forsyth, W. R.; Matthews, C. R., Folding mechanism of indole-3-glycerol phosphate synthase from Sulfolobus solfataricus: a test of the conservation of folding mechanisms hypothesis in (beta(alpha))(8) barrels. J Mol Biol 2002, 320, 1119-33.",,,,,,,,,,,,,,,,,,,,,,
+28,"Ratcliff, K.; Corn, J.; Marqusee, S., Structure, stability, and folding of ribonuclease H1 from the moderately thermophilic Chlorobium tepidum: comparison with thermophilic and mesophilic homologues. Biochemistry 2009, 48, 5890-8.",,,,,,,,,,,,,,,,,,,,,,
+29,"Carstensen, L.; Zoldak, G.; Schmid, F. X.; Sterner, R., Folding mechanism of an extremely thermostable (betaalpha)(8)-barrel enzyme: a high kinetic barrier protects the protein from denaturation. Biochemistry 2012, 51, 3420-32.",,,,,,,,,,,,,,,,,,,,,,
+30,"Enoki, S.; Saeki, K.; Maki, K.; Kuwajima, K., Acid denaturation and refolding of green fluorescent protein. Biochemistry 2004, 43, 14238-48.",,,,,,,,,,,,,,,,,,,,,,
+31,"Fukuda, H.; Arai, M.; Kuwajima, K., Folding of green fluorescent protein and the cycle3 mutant. Biochemistry 2000, 39, 12025-12032.",,,,,,,,,,,,,,,,,,,,,,
+32,"Khan, F.; Chuang, J. I.; Gianni, S.; Fersht, A. R., The kinetic pathway of folding of barnase. J Mol Biol 2003, 333, 169-86.",,,,,,,,,,,,,,,,,,,,,,
+33,"Matouschek, A.; Kellis Jr, J. T.; Serrano, L.; Bycroft, M.; Fersht, A. R., Transient folding intermediates characterized by protein engineering. Nature 1990, 346, 440.",,,,,,,,,,,,,,,,,,,,,,
+34,"Tang, K. S.; Guralnick, B. J.; Wang, W. K.; Fersht, A. R.; Itzhaki, L. S., Stability and folding of the tumour suppressor protein p16. J Mol Biol 1999, 285, 1869-86.",,,,,,,,,,,,,,,,,,,,,,
+35,"Calloni, G.; Taddei, N.; Plaxco, K. W.; Ramponi, G.; Stefani, M.; Chiti, F., Comparison of the folding processes of distantly related proteins. Importance of hydrophobic content in folding. J Mol Biol 2003, 330, 577-91.",,,,,,,,,,,,,,,,,,,,,,
+36,"Patra, A. K.; Udgaonkar, J. B., Characterization of the folding and unfolding reactions of single-chain monellin: evidence for multiple intermediates and competing pathways. Biochemistry 2007, 46, 11727-43.",,,,,,,,,,,,,,,,,,,,,,
+37,"Park, S. H.; Shastry, M. C.; Roder, H., Folding dynamics of the B1 domain of protein G explored by ultrarapid mixing. Nat Struct Biol 1999, 6, 943-7.",,,,,,,,,,,,,,,,,,,,,,
+38,"Schymkowitz, J. W.; Rousseau, F.; Irvine, L. R.; Itzhaki, L. S., The folding pathway of the cell-cycle regulatory protein p13suc1: clues for the mechanism of domain swapping. Structure 2000, 8, 89-100.",,,,,,,,,,,,,,,,,,,,,,
+39,"Endicott, J.; Noble, M.; Garman, E.; Brown, N.; Rasmussen, B.; Nurse, P.; Johnson, L., The crystal structure of p13suc1, a p34cdc2‐interacting cell cycle control protein. The EMBO Journal 1995, 14, 1004-1014.",,,,,,,,,,,,,,,,,,,,,,
+40,"Roder, H.; Maki, K.; Cheng, H., Early events in protein folding explored by rapid mixing methods. Chem Rev 2006, 106, 1836-61.",,,,,,,,,,,,,,,,,,,,,,
+41,"Khorasanizadeh, S.; Peters, I. D.; Roder, H., Evidence for a three-state model of protein folding from kinetic analysis of ubiquitin variants with altered core residues. Nature Structural and Molecular Biology 1996, 3, 193.",,,,,,,,,,,,,,,,,,,,,,
+42,"Choe, S. E.; Li, L.; Matsudaira, P. T.; Wagner, G.; Shakhnovich, E. I., Differential stabilization of two hydrophobic cores in the transition state of the villin 14T folding reaction. J Mol Biol 2000, 304, 99-115.",,,,,,,,,,,,,,,,,,,,,,
+43,"Choe, S. E.; Matsudaira, P. T.; Osterhout, J.; Wagner, G.; Shakhnovich, E. I., Folding kinetics of villin 14T, a protein domain with a central β-sheet and two hydrophobic cores. Biochemistry 1998, 37, 14508-14518.",,,,,,,,,,,,,,,,,,,,,,
+44,"Mitchinson, C.; Pain, R. H., Effects of sulphate and urea on the stability and reversible unfolding of beta-lactamase from Staphylococcus aureus. Implications for the folding pathway of beta-lactamase. J Mol Biol 1985, 184, 331-42.",,,,,,,,,,,,,,,,,,,,,,
+45,"Bemporad, F.; Capanni, C.; Calamai, M.; Tutino, M. L.; Stefani, M.; Chiti, F., Studying the folding process of the acylphosphatase from Sulfolobus solfataricus. A comparative analysis with other proteins from the same superfamily. Biochemistry 2004, 43, 9116-26.",,,,,,,,,,,,,,,,,,,,,,
+46,"Andersson, F. I.; Pina, D. G.; Mallam, A. L.; Blaser, G.; Jackson, S. E., Untangling the folding mechanism of the 5(2)-knotted protein UCH-L3. FEBS J 2009, 276, 2625-35.",,,,,,,,,,,,,,,,,,,,,,
+47,"Patel, M. M.; Tzul, F.; Makhatadze, G. I., Equilibrium and kinetic studies of protein cooperativity using urea-induced folding/unfolding of a Ubq–UIM fusion protein. Biophysical chemistry 2011, 159, 58-65.",,,,,,,,,,,,,,,,,,,,,,
+48,"Faraj, S. E.; Gonzalez-Lebrero, R. M.; Roman, E. A.; Santos, J., Human Frataxin Folds Via an Intermediate State. Role of the C-Terminal Region. Sci Rep 2016, 6, 20782.",,,,,,,,,,,,,,,,,,,,,,
+49,"Santos, J.; Gebhard, L. G.; Risso, V. A.; Ferreyra, R. G.; Rossi, J. P.; Ermacora, M. R., Folding of an abridged beta-lactamase. Biochemistry 2004, 43, 1715-23.",,,,,,,,,,,,,,,,,,,,,,
+50,"Parker, M. J.; Dempsey, C. E.; Lorch, M.; Clarke, A. R., Acquisition of native beta-strand topology during the rapid collapse phase of protein folding. Biochemistry 1997, 36, 13396-405.",,,,,,,,,,,,,,,,,,,,,,
+51,"Finke, J. M.; Jennings, P. A., Interleukin-1 beta folding between pH 5 and 7: experimental evidence for three-state folding behavior and robust transition state positions late in folding. Biochemistry 2002, 41, 15056-67.",,,,,,,,,,,,,,,,,,,,,,
+52,"Covalt Jr, J. C.; Roy, M.; Jennings, P. A., Core and surface mutations affect folding kinetics, stability and cooperativity in IL-1β: does alteration in buried water play a role? 1. Journal of molecular biology 2001, 307, 657-669.",,,,,,,,,,,,,,,,,,,,,,
+53,"Fowler, S. B.; Clarke, J., Mapping the folding pathway of an immunoglobulin domain: structural detail from Phi value analysis and movement of the transition state. Structure 2001, 9, 355-66.",,,,,,,,,,,,,,,,,,,,,,
+54,"Cota, E.; Clarke, J., Folding of beta-sandwich proteins: three-state transition of a fibronectin type III module. Protein Sci 2000, 9, 112-20.",,,,,,,,,,,,,,,,,,,,,,
+55,"Plaxco, K. W.; Spitzfaden, C.; Campbell, I. D.; Dobson, C. M., A comparison of the folding kinetics and thermodynamics of two homologous fibronectin type III modules. J Mol Biol 1997, 270, 763-70.",,,,,,,,,,,,,,,,,,,,,,
+56,"Burns, L. L.; Dalessio, P. M.; Ropson, I. J., Folding mechanism of three structurally similar beta-sheet proteins. Proteins 1998, 33, 107-18.",,,,,,,,,,,,,,,,,,,,,,
+57,"Chattopadhyay, K.; Zhong, S.; Yeh, S. R.; Rousseau, D. L.; Frieden, C., The intestinal fatty acid binding protein: the role of turns in fast and slow folding processes. Biochemistry 2002, 41, 4040-7.",,,,,,,,,,,,,,,,,,,,,,
+58,"Melnik, B. S.; Marchenkov, V. V.; Evdokimov, S. R.; Samatova, E. N.; Kotova, N. V., Multy-state protein: Determination of carbonic anhydrase free-energy landscape. Biochem Biophys Res Commun 2008, 369, 701-6.",,,,,,,,,,,,,,,,,,,,,,
+59,"Burns, L. L.; Ropson, I. J., Folding of intracellular retinol and retinoic acid binding proteins. Proteins 2001, 43, 292-302.",,,,,,,,,,,,,,,,,,,,,,
+60,"Capaldi, A. P.; Ferguson, S. J.; Radford, S. E., The Greek key protein apo-pseudoazurin folds through an obligate on-pathway intermediate. J Mol Biol 1999, 286, 1621-32.",,,,,,,,,,,,,,,,,,,,,,
+61,"Kamagata, K.; Sawano, Y.; Tanokura, M.; Kuwajima, K., Multiple parallel-pathway folding of proline-free Staphylococcal nuclease. J Mol Biol 2003, 332, 1143-53.",,,,,,,,,,,,,,,,,,,,,,
+62,"Maki, K.; Cheng, H.; Dolgikh, D. A.; Shastry, M. C.; Roder, H., Early events during folding of wild-type staphylococcal nuclease and a single-tryptophan variant studied by ultrarapid mixing. J Mol Biol 2004, 338, 383-400.",,,,,,,,,,,,,,,,,,,,,,
+63,"Ikura, T.; Tsurupa, G. P.; Kuwajima, K., Kinetic folding and cis/trans prolyl isomerization of staphylococcal nuclease. A study by stopped-flow absorption, stopped-flow circular dichroism, and molecular dynamics simulations. Biochemistry 1997, 36, 6529-6538.",,,,,,,,,,,,,,,,,,,,,,
+64,"Ropson, I. J.; Boyer, J. A.; Schaeffer, B. A.; Dalessio, P. M., Comparison of the folding mechanism of highly homologous proteins in the lipid-binding protein family. Proteins 2009, 75, 799-806.",,,,,,,,,,,,,,,,,,,,,,
+65,"Fisher, K. M.; Haglund, E.; Noel, J. K.; Hailey, K. L.; Onuchic, J. N.; Jennings, P. A., Geometrical Frustration in Interleukin-33 Decouples the Dynamics of the Functional Element from the Folding Transition State Ensemble. PLoS One 2015, 10, e0144067.",,,,,,,,,,,,,,,,,,,,,,
