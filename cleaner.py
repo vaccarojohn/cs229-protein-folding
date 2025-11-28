@@ -14,7 +14,7 @@ df = pd.read_csv(f'{csv_name}.csv')
 df['Sub-Sequence Used In Experiment'] = df['PDB Sequence']
 df['Length of Sub-Sequence Used In Experiment'] = len(df['PDB Sequence'])
 
-for i in range(len(df)):
+for i in range(10, 11):
     sequence = df.at[i,'PDB Sequence']
     print(f"sequence: {sequence}")
     if sequence != 'WEIRD':
@@ -40,7 +40,7 @@ for i in range(len(df)):
 
         # extract numbers even with extra text (e.g., "Chain B: 29-335")
         if inside:
-            nums = re.findall(r'\d+', inside) 
+            nums = re.findall(r'\d+', inside)
         else:
             nums = []
 

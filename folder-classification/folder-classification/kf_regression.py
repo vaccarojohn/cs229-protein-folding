@@ -10,7 +10,8 @@ from tensorflow import keras
 from tensorflow.keras.utils import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split, KFold
-from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
 def read_data(base_dir, filename):
     df = pd.read_csv(base_dir + "/" + filename)
@@ -37,36 +38,26 @@ def build_rnn_model(x_text_train, x_length_train, y_train, tokenizer, verbose=Fa
     rnn_output = keras.layers.SimpleRNN(64)(text_input)
     numerical_input = keras.Input(shape=(1,), dtype='int32', name='numerical_input')
 
-    combined_processed = keras.layers.Dense(64, activation='sigmoid', name='processing')(keras.layers.concatenate([rnn_output, numerical_input]))
-    output = keras.layers.Dense(1, activation='sigmoid', name='output')(combined_processed)
+    combined_processed = keras.layers.Dense(64, activation='tanh', name='processing')(keras.layers.concatenate([rnn_output, numerical_input]))
+    output = keras.layers.Dense(1, activation='relu', name='output')(combined_processed)
     model = keras.Model(inputs=[text_input, numerical_input], outputs=output)
 
     if verbose:
         model.summary()
     
-    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['mean_squared_error'])
     model.fit({'text_input': train_pad, 'numerical_input': x_length_train}, y_train, epochs=50, verbose=verbose)
     return model
 
-def build_logistic_model(x_length_train, y_train):
-    logreg = LogisticRegression()
-    logreg.fit(x_length_train, y_train)
+def build_linear_model(x_length_train, y_train):
+    linreg = LinearRegression()
+    linreg.fit(x_length_train, y_train)
 
-    return logreg
+    return linreg
 
 def plot_protein_lengths(x_length, ln_kf, y):
-    colors = np.full(len(y), 'b')
-    colors[y == 1] = 'r'
-
-    plt.scatter(x_length, ln_kf, c=colors)
-    plt.xlabel('Length of Protein Sequence')
-    plt.ylabel('ln(k_F)')
-    plt.title('Protein Folding Constant by Length')
-    plt.show()
-
-def plot_test_accuracy(x_length, ln_kf, y, y_pred):
-    colors = np.full(len(y), 'k')
-    colors[y == y_pred] = 'g'
+    colors = np.full(len(y), 'blue')
+    colors[y == 1] = 'red'
 
     plt.scatter(x_length, ln_kf, c=colors)
     plt.xlabel('Length of Protein Sequence')
@@ -84,33 +75,28 @@ def main():
 
     x_text_data = data[['Sub-Sequence Used In Experiment']].values
     x_length_data = data[['Length of Sub-Sequence Used In Experiment']].values
-    x_lnkf_data = data[['ln(kf) 25']].values
-    y_data = data['State'].values
+    y_data = data[['ln(kf) 25']].values
 
-    plot_protein_lengths(x_length_data, x_lnkf_data, y_data)
+    plot_protein_lengths(x_length_data, data[['ln(kf) 25']].values, data['State'].values)
 
     for i, (train_index, test_index) in enumerate(kf.split(x_length_data)):
         x_text_train, x_length_train = x_text_data[train_index], x_length_data[train_index]
         x_text_test, x_length_test = x_text_data[test_index], x_length_data[test_index]
         y_train, y_test = y_data[train_index], y_data[test_index]
-
-        rnn_model = build_rnn_model(x_text_train, x_length_train, y_train, tokenizer)
-        logistic_model = build_logistic_model(x_length_train, y_train)
+        
+        rnn_model = build_rnn_model(x_text_train, x_length_train, y_train, tokenizer, verbose=True)
+        linear_model = build_linear_model(x_length_train, y_train)
 
         test_seq = tokenizer.texts_to_sequences(x_text_test.tolist())
         test_pad = pad_sequences(test_seq, maxlen=141, truncating="post", padding="post")
     
-        rnn_loss, rnn_accuracy = rnn_model.evaluate({'text_input': test_pad, 'numerical_input': x_length_test}, y_test, verbose=False)
-        logistic_accuracy = np.sum(logistic_model.predict(x_length_test) == y_test) / len(y_test)
+        rnn_loss, rnn_squared_error = rnn_model.evaluate({'text_input': test_pad, 'numerical_input': x_length_test}, y_test, verbose=True)
+        linear_squared_error = mean_squared_error(y_test, linear_model.predict(x_length_test))
 
         print("Trial #" + str(i + 1))
         print(f"RNN Test Loss: {rnn_loss:.4f}")
-        print(f"RNN Test Accuracy: {rnn_accuracy:.4f}")
-        print(f"Logistic Test Accuracy: {logistic_accuracy:.4f}")
-
-        total_seq = tokenizer.texts_to_sequences(x_text_data.tolist())
-        total_pad = pad_sequences(total_seq, maxlen=141, truncating="post", padding="post")
-        plot_test_accuracy(x_length_data, x_lnkf_data, y_data, rnn_model.predict({'text_input': total_pad, 'numerical_input': x_length_data}).reshape(-1) >= 0.5)
+        print(f"RNN Test Mean Squared Error: {rnn_squared_error:.4f}")
+        print(f"Linear Test Mean Squared Error: {linear_squared_error:.4f}")
 
 if __name__ == "__main__":
     main()
