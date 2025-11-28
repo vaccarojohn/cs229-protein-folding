@@ -23,7 +23,7 @@ XGB_PARAMS = {
     'eval_metric': 'error'
 }
 
-NUM_TREES = 15
+NUM_TREES = 20
 
 def read_data(base_dir, filename):
     df = pd.read_csv(base_dir + "/" + filename)
@@ -32,7 +32,7 @@ def read_data(base_dir, filename):
     multistate_mask = df['Folding Type'] == 'N2S'
     normal_mask = df['Sub-Sequence Used In Experiment'] != 'WEIRD'
 
-    features = ['Sub-Sequence Used In Experiment', 'Length of Sub-Sequence Used In Experiment', 'ln(kf) 25', 'CO', 'Abs_CO', 'TCD', 'LR_CO']
+    features = ['Sub-Sequence Used In Experiment', 'Length of Sub-Sequence Used In Experiment', 'ln(kf) 25', 'CO', 'Abs_CO', 'TCD', 'LR_CO', 'B_factor']
     two_state_features = df[two_state_mask & normal_mask][features]
     multistate_features = df[multistate_mask & normal_mask][features]
 
@@ -70,6 +70,7 @@ def build_features(data):
     r_data = np.char.count(subseq_data, sub='R') / length_data
     
     # Extract tertiary structure features
+    b_factor_data = data['B_factor'].to_numpy()
     co_data = data['CO'].to_numpy()
     abs_co_data = data['Abs_CO'].to_numpy()
     tcd_data = data['TCD'].to_numpy()
