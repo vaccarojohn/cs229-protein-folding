@@ -3,11 +3,12 @@ import requests
 import tempfile
 import numpy as np
 import pandas as pd
+import pydssp
 from biotite.structure.io import load_structure
 from biotite.structure.celllist import CellList
 from biotite.structure import get_residue_positions
 
-def get_alpha_carbon_list(seq):
+def get_sec_tert_structure(seq):
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -18,13 +19,16 @@ def get_alpha_carbon_list(seq):
     with tempfile.TemporaryDirectory() as temp_dir:
         temp_file_path = os.path.join(temp_dir, 'temp.pdb')
 
+        text = response.content.decode('utf-8')
         with open(temp_file_path, 'w') as f:
-            f.write(response.content.decode('utf-8'))
+            f.write(text)
 
+        sec_coord = pydssp.read_pdbtext(text, return_sequence=False)
+        dssp = ''.join(map(str, pydssp.assign(sec_coord, out_type='index')))
         atom_array = load_structure(temp_file_path, extra_fields=['b_factor'])
         alpha_carbons = atom_array[atom_array.atom_name == 'CA']
 
-    return alpha_carbons
+    return (alpha_carbons, dssp)
 
 def main():
     df = pd.read_csv('data_with_subsequence_data.csv')
@@ -37,9 +41,13 @@ def main():
             df.loc[index, 'TCD'] = 0
             df.loc[index, 'LR_CO'] = 0
             df.loc[index, 'B_factor'] = 0
+            df.loc[index, 'DSSP'] = ''
             continue
 
-        alpha_carbons = get_alpha_carbon_list(row['Sub-Sequence Used In Experiment'])
+        print(row['Sub-Sequence Used In Experiment'])
+        alpha_carbons, dssp = get_sec_tert_structure(row['Sub-Sequence Used In Experiment'])
+
+        df.loc[index, 'DSSP'] = dssp
         df.loc[index, 'B_factor'] = round(np.mean(alpha_carbons.b_factor), 4)
 
         cell_list = CellList(alpha_carbons, cell_size=5)
@@ -82,7 +90,7 @@ def main():
         else:
             df.loc[index, 'LR_CO'] = round(sep_lrco / (n_lrco * l), 4)
 
-    df.to_csv('data_with_tertiary_structure.csv', index=False)
+    df.to_csv('data_with_sec_tert_structure.csv', index=False)
 
 if __name__ == "__main__":
     main()

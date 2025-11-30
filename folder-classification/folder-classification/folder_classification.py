@@ -29,30 +29,21 @@ def read_data(base_dir, filename):
     
     return pd.concat([two_state_features, multistate_features])
 
-def build_rnn_model(x_text_train, x_length_train, y_train, tokenizer, verbose=False):
-    train_seq = tokenizer.texts_to_sequences(x_text_train.tolist())
+def build_rnn_model(x_train, y_train, tokenizer, verbose=False):
+    train_seq = tokenizer.texts_to_sequences(x_train.tolist())
     train_pad = pad_sequences(train_seq, maxlen=141, truncating="post", padding="post")
         
     text_input = keras.Input(shape=(141, 1,), dtype='int32', name='text_input')
     rnn_output = keras.layers.SimpleRNN(64)(text_input)
-    numerical_input = keras.Input(shape=(1,), dtype='int32', name='numerical_input')
-
-    combined_processed = keras.layers.Dense(64, activation='sigmoid', name='processing')(keras.layers.concatenate([rnn_output, numerical_input]))
-    output = keras.layers.Dense(1, activation='sigmoid', name='output')(combined_processed)
-    model = keras.Model(inputs=[text_input, numerical_input], outputs=output)
+    output = keras.layers.Dense(1, activation='sigmoid', name='output')(rnn_output)
+    model = keras.Model(inputs=[text_input], outputs=output)
 
     if verbose:
         model.summary()
     
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-    model.fit({'text_input': train_pad, 'numerical_input': x_length_train}, y_train, epochs=50, verbose=verbose)
+    model.fit({'text_input': train_pad}, y_train, epochs=50, verbose=verbose)
     return model
-
-def build_logistic_model(x_length_train, y_train):
-    logreg = LogisticRegression()
-    logreg.fit(x_length_train, y_train)
-
-    return logreg
 
 def plot_protein_lengths(x_length, ln_kf, y):
     colors = np.full(len(y), 'b')
@@ -80,37 +71,32 @@ def main():
     tokenizer = Tokenizer(char_level=True)
     tokenizer.fit_on_texts(data['Sub-Sequence Used In Experiment'])
 
-    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    kf = KFold(n_splits=len(data), shuffle=True, random_state=42)
 
-    x_text_data = data[['Sub-Sequence Used In Experiment']].values
-    x_length_data = data[['Length of Sub-Sequence Used In Experiment']].values
-    x_lnkf_data = data[['ln(kf) 25']].values
+    x_data = data[['Sub-Sequence Used In Experiment']].values
     y_data = data['State'].values
 
-    plot_protein_lengths(x_length_data, x_lnkf_data, y_data)
+    #x_length_data = data[['Length of Sub-Sequence Used In Experiment']].values
+    #x_lnkf_data = data[['ln(kf) 25']].values
+    #plot_protein_lengths(x_length_data, x_lnkf_data, y_data)
 
-    for i, (train_index, test_index) in enumerate(kf.split(x_length_data)):
-        x_text_train, x_length_train = x_text_data[train_index], x_length_data[train_index]
-        x_text_test, x_length_test = x_text_data[test_index], x_length_data[test_index]
+    final_rnn_accuracy = 0
+    for i, (train_index, test_index) in enumerate(kf.split(x_data)):
+        x_train, x_test = x_data[train_index], x_data[test_index]
         y_train, y_test = y_data[train_index], y_data[test_index]
 
-        rnn_model = build_rnn_model(x_text_train, x_length_train, y_train, tokenizer)
-        logistic_model = build_logistic_model(x_length_train, y_train)
+        rnn_model = build_rnn_model(x_train, y_train, tokenizer)
 
-        test_seq = tokenizer.texts_to_sequences(x_text_test.tolist())
+        test_seq = tokenizer.texts_to_sequences(x_test.tolist())
         test_pad = pad_sequences(test_seq, maxlen=141, truncating="post", padding="post")
     
-        rnn_loss, rnn_accuracy = rnn_model.evaluate({'text_input': test_pad, 'numerical_input': x_length_test}, y_test, verbose=False)
-        logistic_accuracy = np.sum(logistic_model.predict(x_length_test) == y_test) / len(y_test)
+        rnn_loss, rnn_accuracy = rnn_model.evaluate({'text_input': test_pad}, y_test, verbose=False)
+        final_rnn_accuracy += rnn_accuracy / len(data)
+        #print("Trial #" + str(i + 1))
+        #print(f"RNN Test Loss: {rnn_loss:.4f}")
+        #print(f"RNN Test Accuracy: {rnn_accuracy:.4f}")
 
-        print("Trial #" + str(i + 1))
-        print(f"RNN Test Loss: {rnn_loss:.4f}")
-        print(f"RNN Test Accuracy: {rnn_accuracy:.4f}")
-        print(f"Logistic Test Accuracy: {logistic_accuracy:.4f}")
-
-        total_seq = tokenizer.texts_to_sequences(x_text_data.tolist())
-        total_pad = pad_sequences(total_seq, maxlen=141, truncating="post", padding="post")
-        plot_test_accuracy(x_length_data, x_lnkf_data, y_data, rnn_model.predict({'text_input': total_pad, 'numerical_input': x_length_data}).reshape(-1) >= 0.5)
+    print(f"Final RNN Accuracy: {final_rnn_accuracy:.2f}")
 
 if __name__ == "__main__":
     main()
