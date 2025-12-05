@@ -128,7 +128,7 @@ def build_model(x_train, category_features, numeric_features, sequence_features,
 def main():
     #setting up data
     features_to_tokenizers = {feat: Tokenizer(char_level=True) for feat in SEQUENCE_FEATURES} | {feat: Tokenizer(split=None, filters='', lower=False) for feat in CATEGORY_FEATURES}
-    data = read_data('data.csv', CATEGORY_FEATURES, NUMERIC_FEATURES, SEQUENCE_FEATURES, LABEL, features_to_tokenizers, MAX_LENGTH)
+    data = read_data('../data/lstm_data.csv', CATEGORY_FEATURES, NUMERIC_FEATURES, SEQUENCE_FEATURES, LABEL, features_to_tokenizers, MAX_LENGTH)
 
     #k-fold loop
     final_average_metrics = np.asarray([0.0,0.0,0.0])
