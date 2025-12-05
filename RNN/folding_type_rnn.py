@@ -1,7 +1,4 @@
 import os
-
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -11,6 +8,8 @@ from tensorflow.keras.utils import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
 from sklearn.model_selection import train_test_split, KFold
 from sklearn.linear_model import LogisticRegression
+
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 
 def read_data(base_dir, filename):
     df = pd.read_csv(base_dir + "/" + filename)
